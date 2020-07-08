@@ -1,0 +1,65 @@
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entradadedatos;
+
+/**
+ *
+ * @author PEDRO
+ */
+
+import java.io.*;
+
+public class EntradaDeDatos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        String CapturaNombre;
+        String CapturaCorreo;
+        String CapturaDireccion;
+        InputStreamReader input = new InputStreamReader(System.in);
+        BufferedReader bInput = new BufferedReader (input);
+        
+        
+        try{
+        
+                System.out.println("Introduce tu nombre:");
+                CapturaNombre = bInput.readLine();
+                System.out.println("Introduce tu correo electornico:");
+                CapturaCorreo = bInput.readLine();
+                System.out.println("Introduce tu direccion:");
+                CapturaDireccion = bInput.readLine();
+                
+                
+                while(CapturaNombre !=null){
+                    
+                    System.out.println("Nombre:"+" "+CapturaNombre);
+                    System.out.println("Correo:"+" "+CapturaCorreo);
+                    System.out.println("Direccion:"+" "+CapturaDireccion);
+                    CapturaNombre = bInput.readLine();
+                    CapturaCorreo = bInput.readLine();
+                    CapturaDireccion = bInput.readLine();
+
+                
+                }
+                
+        }
+                
+              catch (IOException e){
+                  
+                  e.printStackTrace();
+                        
+            }
+        
+        }
+        
+    }
+    
+
